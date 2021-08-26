@@ -1,0 +1,1000 @@
+@font-face {
+    font-family: 'Public Sans';
+    src: url('../fonts/PublicSans-Regular.woff2') format('woff2'),
+        url('../fonts/PublicSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Public Sans';
+    src: url('../fonts/PublicSans-Thin.woff2') format('woff2'),
+        url('../fonts/PublicSans-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Public Sans';
+    src: url('../fonts/PublicSans-Medium.woff2') format('woff2'),
+        url('../fonts/PublicSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Public Sans',cursive;
+}
+.container{
+    width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+}
+.headr{
+   
+    background-color: #fff;
+    position: relative;
+    z-index: 10;
+
+}
+.headr-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.headr-logo{
+    width: 138px;
+    height: 20px;
+}
+.headr-nav{
+    display: flex;
+    list-style-type: none;
+   
+}
+.headr-nav__item{
+margin-right: 30px;
+border-bottom: 4px solid transparent;
+padding: 32px 0;
+
+}
+.headr-nav__item:hover{
+border-bottom: 4px solid #33D35E;
+transition: border .4s;
+}
+.headr-nav__link{
+    text-decoration: none;
+    font-size: 14px;
+line-height: 16px;
+letter-spacing: -0.107692px;
+color: #9597A5;
+
+}
+.btn{
+    text-decoration: none;
+    padding: 10px 36px 10px 33px;
+    font-weight: 500;
+    color: #fff;
+    background: linear-gradient(135deg, #33D35E 0%, #2AB6D9 99.58%);
+border-radius: 22px;
+}
+.btn:hover{
+    background: linear-gradient(135deg, rgba(51, 211, 94,1) 0%, rgba(42, 182, 217,1) 99.58%);
+ opacity: .4;   
+}
+
+.headr__menu{
+    position: relative;
+   
+}
+.line{
+    width: 24px;
+    height: 1px;
+    background: #2D314D;
+    margin-bottom: 4px;
+  
+}
+.headr__menu .line:first-child{
+    position: absolute;
+    top: -4px;
+}
+.headr__menu .line:last-child{
+    position: absolute;
+    top: 4px;
+}
+
+label[for="headr__input"]{
+    cursor: pointer;
+    display: none;
+    
+}
+.headr__input:checked + .headr__menu .line:nth-child(2){
+    visibility: hidden;
+}
+.headr__input:checked + .headr__menu .line:first-child,
+.headr__input:checked + .headr__menu .line:last-child{
+    top: 0  ;
+}
+.headr__input:checked + .headr__menu .line:first-child{
+transform: rotate(45deg);
+}
+.headr__input:checked + .headr__menu .line:last-child{
+transform: rotate(-45deg);
+}
+.headr__input{
+   display: none; 
+}
+.headr__menu{
+    display: none;
+}
+
+
+/************************************************
+****************** M O D A L ********************
+************************************************/
+.modal{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 9;
+    display: flex;
+   visibility: hidden; 
+
+}
+
+.modal__body{
+    width: 100%;
+    background-color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    padding: 32px;
+    position: absolute;
+    top: 88px;
+ 
+}
+
+.modal-nav{
+    list-style: none;
+}
+.modal-nav__item:not(:last-child){
+margin-bottom: 24px;
+}
+.modal-nav__link{
+    text-decoration: none;
+    color: #2D314D;
+    font-size: 18px;
+line-height: 21px
+}
+.headr__input:checked .modal{
+    visibility: visible;
+}
+
+/************************************************
+******************* H E R O *********************
+************************************************/
+.hero{
+    min-height: 656px;   
+    display: flex;
+    align-items: center;
+    background: #F2F2F2;
+   position: relative;
+}
+.hero-left{
+    width: 427px;
+}
+
+.title{
+    font-weight: 100;    
+line-height: 64px;
+letter-spacing: -1px;
+color: #2D314D;
+
+}
+.title--hero{
+    font-size: 56px;
+}
+.text{
+line-height: 28px;
+letter-spacing: -0.28125px;
+color: #9597A5;
+
+}
+.text--hero{
+    font-size: 18px;
+    margin-top: 24px;
+    margin-bottom: 36px;
+}
+.hero{
+   
+    position: relative;
+}
+.hero-img{
+    position: absolute;
+  top: -80px;
+  right: 0;
+}
+.hero-img-mobile{
+    display: none;
+}
+/*.hero-img{
+    display: none;
+}
+.hero-img-mobile{
+    width: 327px;
+    height: 424px;
+    position: absolute;
+    top: -64px;
+}
+.hero-left{
+padding-top: 322px;
+}
+/************************************************
+********************* W H Y *********************
+************************************************/
+.why{
+    padding: 96px 0;
+    background-color: #F4F5F7;
+}
+.why-top{
+    margin-bottom: 72px;
+}
+.why-bottom{
+    display: flex;
+    justify-content: space-between;
+}
+.easybank-card{
+    width: 255px;
+}
+.title--why{
+    font-size: 40px;
+}
+.text--why{
+    font-size:18px ;
+    margin-top: 16px;
+    width: 635px;
+}
+.title--card{
+font-size: 24px;
+margin-top: 40px;
+margin-bottom: 26px;
+}
+.text--card{
+font-size: 16px;
+
+}
+
+
+.easybank-card--1::before{
+content: '';
+display: inline-block;
+background-image: url(../imgs/card-icon1.png);
+width: 72px;
+height: 72px;
+background-repeat: no-repeat;
+    background-size: contain;
+
+}
+.easybank-card--2::before{
+    content: '';
+    display: inline-block;
+    background-image: url(../imgs/card-icon2.png);
+    width: 72px;
+    height: 72px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.easybank-card--3::before{
+        content: '';
+        display: inline-block;
+        background-image: url(../imgs/card-icon3.png);
+        width: 72px;
+        height: 72px;
+        background-repeat: no-repeat;
+    background-size: contain;
+}
+.easybank-card--4::before{
+    content: '';
+    display: inline-block;
+    background-image: url(../imgs/card-icon4.png);
+    width: 72px;
+    height: 72px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+/************************************************
+******************** ARTICLE ********************
+************************************************/
+.article{
+    padding: 80px 0;
+    background: #F2F2F2;
+}
+.article__content{
+display: flex;
+justify-content: space-between;
+margin-top: 40px;
+
+}
+.title--article{
+    font-size: 40px;
+}
+.easybank-article-card {
+    width: 255px;
+background-color: #fff;
+border-radius: 5px;
+}
+.for-article{
+    padding: 25px;
+}
+.easybank-article-card  .text--article-card--litle{
+    font-size: 10px;
+    line-height: 18px;
+    margin: 0;
+   }
+.title--article-card{
+    margin: 8px 0;
+    font-size: 16px;
+    line-height: 20px;
+}
+.title--article-card:hover{
+    color:#30C88F;
+    transition: color .4s ease-in-out;
+}
+.text--article-card{
+font-size: 13px;
+line-height: 18px;
+}
+.easybank-article--1::before{
+content: '';
+background-image: url(../imgs/article1.png);
+display: inline-block;
+width: 255px;
+height: 200px;
+background-repeat: no-repeat;
+background-size: contain;
+
+}
+.easybank-article--2::before{
+    content: '';
+    background-image: url(../imgs/article2.png);
+    display: inline-block;
+    width: 255px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+}
+.easybank-article--3::before{
+    content: '';
+    background-image: url(../imgs/article3.png);
+    display: inline-block;
+    width: 255px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+}
+.easybank-article--4::before{
+    content: '';
+    background-image: url(../imgs/article4.png);
+    display: inline-block;
+    width: 255px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+}
+/************************************************
+***************** F O O T E R *******************
+************************************************/
+.footer{
+    background-color:#2D314D;
+    padding: 48px 0;
+}
+.facebook:hover path{
+    fill: #30C88F;
+    transition: all .4s;
+}
+.youtube:hover path{
+    fill:#30C88F;
+    transition: all .4s;
+}
+.twitter:hover path{
+    fill:#30C88F;
+    transition: all .4s;
+}
+.pinterest:hover path{
+    fill:#30C88F;
+    transition: all .4s;
+}
+.instagram:hover path{
+    fill:#30C88F;
+    transition: all .4s;
+}
+.footer__contents{
+    display: flex;
+    
+}
+.footer__content__1{
+margin-right: 131px;
+width: 200px;
+
+}
+.footer__content__2{
+margin-right: 30px;
+width: 160px;
+}
+.footer__content__3{
+width: 160px;
+margin-right: 188px;
+}
+.footer__content__4{
+text-align: right;
+margin-top: 10px;
+width: 231px;
+}
+.footer__icons{
+    margin-top: 55px;
+}
+.icons__link{
+    margin-right: 13px;
+}
+.footer-nav{
+list-style-type: none;
+}
+.footer-nav__item{
+margin-bottom: 8px;
+}
+.footer-nav__link{
+text-decoration: none;
+font-size: 15px;
+line-height: 26px;
+letter-spacing: -0.234375px;
+color: #FFFFFF;
+}
+.footer-nav__link:hover{
+    color: #30C88F;
+}
+.footer-text{
+    font-size: 15px;
+line-height: 26px;
+text-align: right;
+letter-spacing: -0.234375px;
+color: #FFFFFF;
+opacity: 0.5;
+margin-top: 25px;
+}
+
+@media (max-width:1200px){
+    .container{
+        max-width: 1000px;
+        padding: 0 20px;
+        margin:0 auto;
+    }
+    .hero-img{
+       width: 640px;
+    }
+    .hero{
+        min-height: 530px;
+    }
+    .title{
+        line-height: 60px;
+    }
+    .text{
+        line-height: 24px;
+    }
+    .title--hero{
+        font-size: 52px;
+    }
+    .text--hero {
+        font-size: 16px;
+        margin-top: 20px;
+        margin-bottom: 32px;
+    }
+    .why {
+        padding: 70px 0;
+    }    
+    .title--why {
+        font-size: 38px;
+    }
+    .text--why{
+            font-size: 16px;
+            margin-top: 12px;
+    }
+    .easybank-card--1::before,
+    .easybank-card--2::before,
+    .easybank-card--3::before,
+    .easybank-card--4::before{
+        width: 65px;
+        height: 65px;
+    }
+    .title--card{
+        font-size: 23px;
+        margin-top: 20px;
+    margin-bottom: 20px;
+    }
+    .text--card{
+        font-size: 14px;
+    }
+    .article {
+        padding: 60px 0;
+    }
+    .title--article {
+        font-size: 38px;
+    }
+    .easybank-article-card {
+        width: 230px;
+    }
+
+    .easybank-article--1::before,
+    .easybank-article--2::before,
+    .easybank-article--3::before,
+    .easybank-article--4::before {
+        width: 230px;
+        height: 180px;
+    }
+    .for-article {
+        padding: 20px;
+    }
+    .title--article-card {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .text--article-card {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .footer__icons{
+        margin-top: 40px;
+    }
+    .icons__link {
+        margin-right: 9px;
+    }
+    .icons{
+        width: 18px;
+        height: 18px;
+    }
+    .footer__content__4 {
+        width: 290px;
+    }
+    .footer__content__3{
+        margin-right: 150px;
+    }
+
+}
+@media (max-width:1050px){
+    .container{
+        max-width: 950px;
+    }
+    .btn{
+        padding: 8px 23px;
+        font-size: 15px;
+    }
+    .easybank-card {
+        width: 210px;
+    }
+    .easybank-article-card {
+        width: 210px;
+    }
+    .easybank-article--1::before, 
+    .easybank-article--2::before,
+     .easybank-article--3::before, 
+     .easybank-article--4::before {
+         width: 210px;
+         height: 165px;
+     }
+     .icons{
+        width: 18px;
+        height: 18px;
+    }
+    .footer{
+        padding: 35px 0;
+    }
+    .footer-nav__link {
+        font-size: 14px;
+        line-height: 22px;
+    }
+        .footer__content__3 {
+            margin-right: 100px;
+        }
+}
+@media (max-width:1060px){
+    .container{
+        max-width:810px;
+
+    }
+    .hero {
+        min-height: 460px;
+    }
+    .hero-left {
+        width: 325px;
+    }
+  
+    .hero-img {
+    width: 600px;
+    }
+    .title{
+        line-height: 50px;
+    }
+    .title--hero{
+        font-size: 44px;
+    }
+    .text {
+        line-height: 22px;
+    }
+    .text--hero {
+       
+        margin-top: 14px;
+        margin-bottom: 24px;
+    }
+    .why {
+        padding: 50px 0;
+    }
+    .why-top {
+        margin-bottom: 55px;
+    }
+    .text--why {
+        width: 500px;
+    }
+    .easybank-card{
+        width: 166px;
+    }
+    .title--card {
+        font-size: 21px;
+        margin-top: 7px;
+        margin-bottom: 5px;
+
+}
+.easybank-article-card {
+    width: 180px;
+}
+.easybank-article--1::before,
+ .easybank-article--2::before, 
+ .easybank-article--3::before, 
+ .easybank-article--4::before {
+    width: 180px;
+    height: 141px;
+ }
+ .easybank-article-card .text--article-card--litle{
+    line-height: 0px;
+ }
+ .easybank-article-card .title--article-card {
+     line-height: 20px;
+ }
+ .easybank-article-card .text--article-card{
+     line-height: 18px;
+
+ }
+ .footer__icons {
+    margin-top: 25px;
+}
+ .icons__link {
+    margin-right: 5px;
+}
+ .icons {
+    width: 18px;
+    height: 18px;
+}
+.footer__content__3{
+    margin-right: 80px;
+}
+.footer__content__4 {
+    width: 268px;
+}
+.footer-text {
+    font-size: 12px;
+}
+
+
+
+}
+
+@media (max-width:950px){
+.hero-img{
+    width: 550px;
+    
+}
+}
+@media (max-width:860px)
+{
+   
+    .container{
+        max-width:700px;
+
+    }
+    .hero {
+        min-height: 460px;
+    }
+    .hero-left {
+        width: 325px;
+    }
+  
+     .hero-img{
+        width: 450px;
+    }
+    .title{
+        line-height: 44px;
+    }
+    .title--hero{
+        font-size: 38px;
+    }
+    .text {
+        line-height: 20px;
+    }
+    .text--hero {
+       font-size: 15px;
+        margin-top: 12px;
+        margin-bottom: 20px;
+    }
+    .btn {
+        padding: 7px 20px;
+        font-size: 14px;
+    }
+    .why {
+        padding: 40px 0;
+    }
+    .why-top {
+        margin-bottom: 50px;
+    }
+    .title--why{
+        font-size: 34px;
+    }
+    .text--why {
+       
+        font-size: 15px;
+    }
+    .why-bottom{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .easybank-card {
+        width: 258px;
+    }
+    .easybank-card--3,.easybank-card--4{
+        margin-top: 30px;
+    }
+    .title--card {
+        font-size: 21px;
+        margin-top: 7px;
+        margin-bottom: 5px;
+
+}
+.article__content{
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+.easybank-article-card {
+    width: 290px;
+}
+.easybank-article-card:nth-child(3),.easybank-article-card:nth-child(4){
+    margin-top: 30px;
+}
+.easybank-article--1::before,
+ .easybank-article--2::before, 
+ .easybank-article--3::before, 
+ .easybank-article--4::before {
+    width: 290px;
+    height: 228px;
+ }
+ .easybank-article-card .text--article-card--litle{
+    line-height: 0px;
+    font-size: 14px;
+ }
+ .easybank-article-card .title--article-card {
+     line-height: 20px;
+     font-size: 18px;
+     margin-top: 15px;
+ }
+ .easybank-article-card .text--article-card{
+     line-height: 18px;
+    font-size: 16px;
+ }
+ .footer__icons {
+    margin-top: 25px;
+}
+ .icons__link {
+    margin-right: 5px;
+}
+ .icons {
+    width: 18px;
+    height: 18px;
+}
+.footer__content__3{
+    margin-right: 80px;
+}
+.footer__content__4 {
+    width: 268px;
+}
+.footer-text {
+    font-size: 12px;
+}
+
+
+
+}
+
+
+@media (max-width:376px){
+    .container{
+        max-width: 375px;
+        margin: 0;
+        padding: 0 24px;
+    }
+
+    .modal__body{
+        width: 87%;
+        top: 66px;
+    }
+    label[for="headr__input"]{
+        cursor: pointer;
+        display: flex;
+        
+    }
+
+    .headr__input:checked + .modal{
+         visibility: visible; 
+       
+    }
+
+    .headr{
+        padding: 22px 0;
+    }
+    .headr-content .btn{
+        display: none;
+    }
+    .headr-nav{
+        display: none;
+    }
+    .headr__menu{
+        display: block;
+    }
+    .menu{
+        display: block;
+    }
+  
+    
+    .line{
+        visibility: visible;
+    }
+    .hero{
+        display: block;
+        min-height: 100px;
+        padding-bottom: 88px;
+    }    
+    .hero-left{
+        width:auto;
+        text-align: center;
+        padding-top: 322px;
+    } 
+    .hero-img{
+        display: none;
+    }
+    .hero-img-mobile{
+        display: block;
+        position: absolute;
+        top: -64px;
+        left: 0;
+    }
+    
+    .text{
+        font-size: 15px;
+line-height: 25px;
+margin-top: 16px;
+margin-bottom: 32px;
+    }
+    
+    .title--hero{
+        width: 327px;
+        font-size: 40px;
+        line-height: 47px;
+    }
+    .why{
+        padding: 64px 0;
+        text-align: center;
+       
+    }
+    .why-top{
+        width: 327px;
+        margin-bottom: 0;
+    }
+    .why-bottom{
+        display: block;
+    }
+    .title--why{
+        font-size: 33px;
+        line-height: 38.6px;
+    }
+    
+    .text--why{
+        width: 327px;
+        margin-top: 14px;
+        margin-bottom: 56px;
+    }
+    
+    .easybank-card{
+        width: 327px;
+    }
+    .title--card{
+        font-size: 20px;
+        line-height: 28px;
+        margin-top: 24px;
+        margin-bottom: 16px;
+    }
+    .text--card{
+        margin-top: 0;
+        margin-bottom: 32px;
+    }
+    .article{
+        padding: 88px 0;
+        text-align: center;
+    } 
+    .article__content{
+       display: block;
+       text-align: left;
+   }
+   .easybank-article-card{
+       width: 327px;
+        margin-bottom: 24px;
+   }
+  .easybank-article--1::before,
+  .easybank-article--2::before,
+  .easybank-article--3::before,
+  .easybank-article--4::before{
+      width: 327px;
+      background-size: cover;
+  }
+  .for-article{
+      padding: 25px 31px 31px 31px;
+  }
+   .title--article{
+       width: 327px;
+       font-size: 32px;
+       line-height: 37.6px;
+   }
+ 
+   .text--article-card{
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+   }   
+   .title--article-card{
+    font-size: 16px;
+    line-height: 20px;
+    margin: 8px 0;
+   }
+   .footer{
+    padding: 40px 77px;
+    text-align: center;
+   
+   }
+   .footer .container{
+       padding: 0;
+       max-width: 221px;
+   }
+   .footer__contents{
+       display: block;
+   }
+   .footer__icons{
+    margin: 32px 0;
+   }
+   .footer__content__1,
+   .footer__content__2,
+   .footer__content__3,
+   .footer__content__4{
+       text-align: center;
+    width: 221px;
+    margin: 0;
+   }
+   .footer__content__4 {
+    text-align: center;
+    margin-top: 32px;    
+    }
+}
